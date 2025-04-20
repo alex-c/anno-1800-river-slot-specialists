@@ -1,0 +1,152 @@
+<ModOps>
+
+   <!-- START SPECIALIST - Prospector -->
+   <ModOp GUID="112574" Type="addNextSibling">
+      <Asset>
+         <Template>GuildhouseItem</Template>
+         <Values>
+            <Standard>
+                <GUID>2003000000</GUID>
+                <Name>Prospector</Name>
+                <IconFilename>data/graphics/icons/prospector.png</IconFilename>
+                <InfoDescription>2003000001</InfoDescription>
+            </Standard>
+            <Text>
+               <LocaText>
+                  <English>
+                     <Text>Item Template</Text>
+                     <Status>Exported</Status>
+                     <ExportCount>1</ExportCount>
+                  </English>
+               </LocaText>
+            </Text>
+            <Item>
+               <MaxStackSize>1</MaxStackSize>
+               <Rarity>Common</Rarity>
+               <ItemType>Specialist</ItemType>
+               <Allocation>GuildHouse</Allocation>
+               <TradePrice>33000</TradePrice>
+               <TradePriceOnlineCurrency>22000</TradePriceOnlineCurrency>
+            </Item>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>1999002372</GUID><!-- Clay Collector OW -->
+                        </Item>
+                        <Item>
+                            <GUID>1999002376</GUID><!-- Clay Collector NW -->
+                        </Item>
+                        <Item>
+                            <GUID>1999003201</GUID><!-- Gold Washer NW -->
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+            <FactoryUpgrade>
+                <AdditionalOutput>
+                    <Item>
+                        <Product>1010228</Product>
+                        <AdditionalOutputCycle>4</AdditionalOutputCycle>
+                        <Amount>1</Amount>
+                    </Item>
+                    <Item>
+                        <Product>1010227</Product>
+                        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+                        <Amount>1</Amount>
+                    </Item>
+                    <Item>
+                        <Product>1010230</Product>
+                        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+                        <Amount>1</Amount>
+                    </Item>
+                    <Item>
+                        <Product>1010229</Product>
+                        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+                        <Amount>1</Amount>
+                    </Item>
+                    <Item>
+                        <Product>1010233</Product>
+                        <AdditionalOutputCycle>8</AdditionalOutputCycle>
+                        <Amount>1</Amount>
+                    </Item>
+                </AdditionalOutput>
+            </FactoryUpgrade>
+            <BuildingUpgrade>
+                <WorkforceAmountUpgrade>
+                    <Value>+10</Value>
+                    <Percental>1</Percental>
+                </WorkforceAmountUpgrade>
+            </BuildingUpgrade>
+            <ExpeditionAttribute>
+                <BaseMorale>10</BaseMorale>
+                <ExpeditionAttributes>
+                    <Item>
+                        <Attribute>PerkMale</Attribute>
+                        <Amount>1</Amount>
+                    </Item>
+                    <Item>
+                        <Attribute>Crafting</Attribute>
+                        <Amount>5</Amount>
+                    </Item>
+                </ExpeditionAttributes>
+                <ItemDifficulties>Easy</ItemDifficulties>
+            </ExpeditionAttribute>
+         </Values>
+      </Asset>
+   </ModOp>
+   <!-- END SPECIALIST - Prospector -->
+
+    <ModOp Type="add" GUID="192971,192728,192733,192836,192900,192905" Path="/Values/RewardPool/ItemsPool">
+        <Item>
+            <ItemLink>2003000000</ItemLink>
+        </Item>
+    </ModOp>
+
+    <ModOp Type="addnextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>2003000002</GUID>
+                    <Name>Specialist Trigger</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>15000001</Context>
+                                <CounterAmount>1</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>2003000000</Asset> 
+                                            </Item>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>2003000000</Asset> 
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+</ModOps>

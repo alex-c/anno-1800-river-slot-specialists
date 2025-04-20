@@ -1,0 +1,14 @@
+<ModOps>
+   <ModOp Type="add" Path="/TextExport/Texts">
+    <!-- START SPECIALIST - Prospector -->
+    <Text>
+      <GUID>2003000000</GUID>
+      <Text>Prospector</Text>
+    </Text>
+    <Text>
+      <GUID>2003000001</GUID>
+      <Text>A prospector sifting river mud in the hopes of finding gold.</Text>
+    </Text>
+    <!-- END SPECIALIST - Maria Lopez -->
+   </ModOp>
+</ModOps>
