@@ -7,8 +7,8 @@
          <Values>
             <Standard>
                 <GUID>2003000000</GUID>
-                <Name>Prospector</Name>
-                <IconFilename>data/graphics/icons/prospector.png</IconFilename>
+                <Name>Gold Prospector</Name>
+                <IconFilename>data/graphics/icons/gold_prospector.png</IconFilename>
                 <InfoDescription>2003000001</InfoDescription>
             </Standard>
             <Text>
@@ -22,11 +22,11 @@
             </Text>
             <Item>
                <MaxStackSize>1</MaxStackSize>
-               <Rarity>Common</Rarity>
+               <Rarity>Rare</Rarity>
                <ItemType>Specialist</ItemType>
                <Allocation>GuildHouse</Allocation>
-               <TradePrice>33000</TradePrice>
-               <TradePriceOnlineCurrency>22000</TradePriceOnlineCurrency>
+               <TradePrice>83000</TradePrice>
+               <TradePriceOnlineCurrency>83000</TradePriceOnlineCurrency>
             </Item>
                 <ItemEffect>
                     <EffectTargets>
@@ -50,7 +50,7 @@
                     </Item>
                     <Item>
                         <Product>1010227</Product>
-                        <AdditionalOutputCycle>6</AdditionalOutputCycle>
+                        <AdditionalOutputCycle>5</AdditionalOutputCycle>
                         <Amount>1</Amount>
                     </Item>
                     <Item>
@@ -72,7 +72,7 @@
             </FactoryUpgrade>
             <BuildingUpgrade>
                 <WorkforceAmountUpgrade>
-                    <Value>+10</Value>
+                    <Value>+15</Value>
                     <Percental>1</Percental>
                 </WorkforceAmountUpgrade>
             </BuildingUpgrade>
@@ -85,17 +85,17 @@
                     </Item>
                     <Item>
                         <Attribute>Crafting</Attribute>
-                        <Amount>5</Amount>
+                        <Amount>10</Amount>
                     </Item>
                 </ExpeditionAttributes>
-                <ItemDifficulties>Easy</ItemDifficulties>
+                <ItemDifficulties>Average</ItemDifficulties>
             </ExpeditionAttribute>
          </Values>
       </Asset>
    </ModOp>
    <!-- END SPECIALIST - Prospector -->
 
-    <ModOp Type="add" GUID="192971,192728,192733,192836,192900,192905" Path="/Values/RewardPool/ItemsPool">
+    <ModOp Type="add" GUID="192973,192730,192735,192838,192907,192902" Path="/Values/RewardPool/ItemsPool">
         <Item>
             <ItemLink>2003000000</ItemLink>
         </Item>
