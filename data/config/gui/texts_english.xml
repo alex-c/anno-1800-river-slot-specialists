@@ -1,5 +1,6 @@
 <ModOps>
    <ModOp Type="add" Path="/TextExport/Texts">
+
     <!-- START SPECIALIST - Gold Prospector -->
     <Text>
       <GUID>2003000000</GUID>
@@ -10,5 +11,17 @@
       <Text>A prospector sifting river mud in the hopes of finding the odd gold nugget.</Text>
     </Text>
     <!-- END SPECIALIST - Gold Prospector -->
+
+    <!-- START SPECIALIST - Shift Foreman -->
+    <Text>
+      <GUID>2003000003</GUID>
+      <Text>Shift Foreman</Text>
+    </Text>
+    <Text>
+      <GUID>2003000004</GUID>
+      <Text>Making sure nobody slacks off on shift.</Text>
+    </Text>
+    <!-- END SPECIALIST - Shift Foreman -->
+
    </ModOp>
 </ModOps>

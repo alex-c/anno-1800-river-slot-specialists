@@ -1,6 +1,6 @@
 <ModOps>
 
-   <!-- START SPECIALIST - Prospector -->
+   <!-- START SPECIALIST - Gold Prospector -->
    <ModOp GUID="112574" Type="addNextSibling">
       <Asset>
          <Template>GuildhouseItem</Template>
@@ -72,7 +72,7 @@
             </FactoryUpgrade>
             <BuildingUpgrade>
                 <WorkforceAmountUpgrade>
-                    <Value>+15</Value>
+                    <Value>+35</Value>
                     <Percental>1</Percental>
                 </WorkforceAmountUpgrade>
             </BuildingUpgrade>
@@ -93,11 +93,74 @@
          </Values>
       </Asset>
    </ModOp>
-   <!-- END SPECIALIST - Prospector -->
+   <!-- END SPECIALIST - Gold Prospector -->
+   
+   <!-- START SPECIALIST - Shift Foreman -->
+   <ModOp GUID="112574" Type="addNextSibling">
+      <Asset>
+         <Template>GuildhouseItem</Template>
+         <Values>
+            <Standard>
+                <GUID>2003000003</GUID>
+                <Name>Shift Foreman</Name>
+                <IconFilename>data/graphics/icons/shift_foreman.png</IconFilename>
+                <InfoDescription>2003000004</InfoDescription>
+            </Standard>
+            <Text>
+               <LocaText>
+                  <English>
+                     <Text>Item Template</Text>
+                     <Status>Exported</Status>
+                     <ExportCount>1</ExportCount>
+                  </English>
+               </LocaText>
+            </Text>
+            <Item>
+               <MaxStackSize>1</MaxStackSize>
+               <Rarity>Rare</Rarity>
+               <ItemType>Specialist</ItemType>
+               <Allocation>GuildHouse</Allocation>
+               <TradePrice>77000</TradePrice>
+               <TradePriceOnlineCurrency>77000</TradePriceOnlineCurrency>
+            </Item>
+                <ItemEffect>
+                    <EffectTargets>
+                        <Item>
+                            <GUID>1500301947</GUID><!-- TODO: All riverslot buildings -->
+                        </Item>
+                    </EffectTargets>
+                </ItemEffect>
+            <FactoryUpgrade>
+                <ProductivityUpgrade>
+                    <Value>25</Value>
+                    <Percental>1</Percental>
+                </ProductivityUpgrade>
+            </FactoryUpgrade>
+            <BuildingUpgrade>
+                <WorkforceAmountUpgrade>
+                    <Value>-10</Value>
+                    <Percental>1</Percental>
+                </WorkforceAmountUpgrade>
+                <MaintenanceUpgrade>
+                    <Value>-10</Value>
+                    <Percental>1</Percental>
+                </MaintenanceUpgrade>
+            </BuildingUpgrade>
+            <ExpeditionAttribute>
+                <BaseMorale>10</BaseMorale>
+                <ItemDifficulties>Average</ItemDifficulties>
+            </ExpeditionAttribute>
+         </Values>
+      </Asset>
+   </ModOp>
+   <!-- END SPECIALIST - Shift Foreman -->
 
     <ModOp Type="add" GUID="192973,192730,192735,192838,192907,192902" Path="/Values/RewardPool/ItemsPool">
         <Item>
             <ItemLink>2003000000</ItemLink>
+        </Item>
+        <Item>
+            <ItemLink>2003000003</ItemLink>
         </Item>
     </ModOp>
 
@@ -132,10 +195,16 @@
                                             <Item>
                                                 <Asset>2003000000</Asset> 
                                             </Item>
+                                            <Item>
+                                                <Asset>2003000003</Asset> 
+                                            </Item>
                                         </UnhideAssets>
                                         <UnlockAssets>
                                             <Item>
                                                 <Asset>2003000000</Asset> 
+                                            </Item>
+                                            <Item>
+                                                <Asset>2003000003</Asset> 
                                             </Item>
                                         </UnlockAssets>
                                     </ActionUnlockAsset>

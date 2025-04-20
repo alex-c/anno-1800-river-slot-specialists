@@ -13,6 +13,12 @@ The repository for these mods can be found here on GitHub: [Taludas/RiverSlots](
 
 The following items are added to the game:
 
-| Icon | Name | Description | Affected buildings | Effect |
-|-|-|-|-|-|
-| ![Gold Prospector](./data/graphics/icons/gold_prospector.png) | Gold Prospector | A prospector sifting river mud in the hopes of finding the odd gold nugget. | Clay Collector OW<br />Clay Collector NW<br />Gold Washer NW | + 1/4 Quartz Sand<br/>+1/5 Iron<br />+1/6 Copper<br />+1/6 Zinc<br />+1/8 Gold Ore |
+| Name | Rarity | Affected buildings | Effects |
+|-|-|-|-|
+| Gold Prospector | Rare | Clay Collector OW<br />Clay Collector NW<br />Gold Washer NW | Workforce needed +35 %<br />+ 1/4 Quartz Sand<br/>+1/5 Iron<br />+1/6 Copper<br />+1/6 Zinc<br />+1/8 Gold Ore |
+| Shift Foreman | Rare | All riverslot buildings | Productivity +25 %<br />Workforce needed -10 %<br />Maintenance costs -10 % |
+
+## Screenshots (WIP)
+
+![Gold Prospector](./screenshots/gold_prospector.png)
+![Shift Foreman](./screenshots/gold_prospector.png)
