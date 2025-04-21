@@ -28,19 +28,19 @@
                <TradePrice>83000</TradePrice>
                <TradePriceOnlineCurrency>83000</TradePriceOnlineCurrency>
             </Item>
-                <ItemEffect>
-                    <EffectTargets>
-                        <Item>
-                            <GUID>1999002372</GUID><!-- Clay Collector OW -->
-                        </Item>
-                        <Item>
-                            <GUID>1999002376</GUID><!-- Clay Collector NW -->
-                        </Item>
-                        <Item>
-                            <GUID>1999003201</GUID><!-- Gold Washer NW -->
-                        </Item>
-                    </EffectTargets>
-                </ItemEffect>
+            <ItemEffect>
+                <EffectTargets>
+                    <Item>
+                        <GUID>1999002372</GUID><!-- Clay Collector OW -->
+                    </Item>
+                    <Item>
+                        <GUID>1999002376</GUID><!-- Clay Collector NW -->
+                    </Item>
+                    <Item>
+                        <GUID>1999003201</GUID><!-- Gold Washer NW -->
+                    </Item>
+                </EffectTargets>
+            </ItemEffect>
             <FactoryUpgrade>
                 <AdditionalOutput>
                     <Item>
@@ -123,13 +123,13 @@
                <TradePrice>77000</TradePrice>
                <TradePriceOnlineCurrency>77000</TradePriceOnlineCurrency>
             </Item>
-                <ItemEffect>
-                    <EffectTargets>
-                        <Item>
-                            <GUID>1500301947</GUID><!-- TODO: All riverslot buildings -->
-                        </Item>
-                    </EffectTargets>
-                </ItemEffect>
+            <ItemEffect>
+                <EffectTargets>
+                    <Item>
+                        <GUID>1500301947</GUID>
+                    </Item>
+                </EffectTargets>
+            </ItemEffect>
             <FactoryUpgrade>
                 <ProductivityUpgrade>
                     <Value>25</Value>
@@ -154,7 +154,77 @@
       </Asset>
    </ModOp>
    <!-- END SPECIALIST - Shift Foreman -->
+   
+   <!-- START SPECIALIST - Madame Dorade, Fishing Enthusiast -->
+   <ModOp GUID="112574" Type="addNextSibling">
+      <Asset>
+         <Template>GuildhouseItem</Template>
+         <Values>
+            <Standard>
+                <GUID>2003000004</GUID>
+                <Name>Madame Dorade, Fishing Enthusiast</Name>
+                <IconFilename>data/graphics/icons/madame_dorade_fishing_enthusiast.png</IconFilename>
+                <InfoDescription>2003000005</InfoDescription>
+            </Standard>
+            <Text>
+               <LocaText>
+                  <English>
+                     <Text>Item Template</Text>
+                     <Status>Exported</Status>
+                     <ExportCount>1</ExportCount>
+                  </English>
+               </LocaText>
+            </Text>
+            <Item>
+               <MaxStackSize>1</MaxStackSize>
+               <Rarity>Epic</Rarity>
+               <ItemType>Specialist</ItemType>
+               <Allocation>GuildHouse</Allocation>
+               <TradePrice>135000</TradePrice>
+               <TradePriceOnlineCurrency>135000</TradePriceOnlineCurrency>
+            </Item>
+            <ItemEffect>
+                <EffectTargets>
+                    <Item>
+                        <GUID>1999002380</GUID><!-- River Fishery -->
+                    </Item>
+                    <Item>
+                        <GUID>1999002385</GUID><!-- River Fishoil Factory -->
+                    </Item>
+                    <Item>
+                        <GUID>1999002393</GUID><!-- River Pearl Farm -->
+                    </Item>
+                </EffectTargets>
+            </ItemEffect>
+            <FactoryUpgrade>
+                <AdditionalOutput>
+                    <Item>
+                        <Product>1010200</Product>
+                        <AdditionalOutputCycle>3</AdditionalOutputCycle>
+                        <Amount>1</Amount>
+                    </Item>
+                    <Item>
+                        <Product>5380</Product>
+                        <AdditionalOutputCycle>3</AdditionalOutputCycle>
+                        <Amount>1</Amount>
+                    </Item>
+                    <Item>
+                        <Product>118728</Product>
+                        <AdditionalOutputCycle>3</AdditionalOutputCycle>
+                        <Amount>1</Amount>
+                    </Item>
+                </AdditionalOutput>
+            </FactoryUpgrade>
+            <ExpeditionAttribute>
+                <BaseMorale>10</BaseMorale>
+                <ItemDifficulties>Average</ItemDifficulties>
+            </ExpeditionAttribute>
+         </Values>
+      </Asset>
+   </ModOp>
+   <!-- END SPECIALIST - Madame Dorade, Fishing Enthusiast -->
 
+    <!-- Item Pools  - Rare Items -->
     <ModOp Type="add" GUID="192973,192730,192735,192838,192907,192902,193977,193974,193967" Path="/Values/RewardPool/ItemsPool">
         <Item>
             <ItemLink>2003000000</ItemLink>
@@ -164,12 +234,20 @@
         </Item>
     </ModOp>
 
+    <!-- Item Pools  - Epic Items -->
+    <ModOp Type="add" GUID="192974,192731,192736,192839,192908,192903,193083,193965" Path="/Values/RewardPool/ItemsPool">
+        <Item>
+            <ItemLink>2003000004</ItemLink>
+        </Item>
+    </ModOp>
+
+    <!-- Trigger: 1 Worker -->
     <ModOp Type="addnextSibling" GUID="130248">
         <Asset>
             <Template>Trigger</Template>
             <Values>
                 <Standard>
-                    <GUID>2003000004</GUID>
+                    <GUID>2003000006</GUID>
                     <Name>Specialist Trigger</Name>
                 </Standard>
                 <Trigger>
@@ -205,6 +283,55 @@
                                             </Item>
                                             <Item>
                                                 <Asset>2003000003</Asset> 
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- Trigger: 500 Jornaleros -->
+    <ModOp Type="addnextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>2003000007</GUID>
+                    <Name>Specialist Trigger</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>15000005</Context>
+                                <CounterAmount>500</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>2003000004</Asset> 
+                                            </Item>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>2003000004</Asset> 
                                             </Item>
                                         </UnlockAssets>
                                     </ActionUnlockAsset>

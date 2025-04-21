@@ -15,10 +15,12 @@ The following items are added to the game:
 
 | Icon | Name | Rarity | Affected buildings | Effects |
 |-|-|-|-|-|
-| ![Gold Prospector](./data/graphics/icons/gold_prospector.png) | Gold Prospector | Rare | Clay Collector OW<br />Clay Collector NW<br />Gold Washer NW | Workforce needed +35 %<br />+ 1/4 Quartz Sand<br/>+1/5 Iron<br />+1/6 Copper<br />+1/6 Zinc<br />+1/8 Gold Ore |
+| ![Gold Prospector](./data/graphics/icons/gold_prospector.png) | Gold Prospector | Rare | Clay Collector OW<br />Clay Collector NW<br />Gold Washer NW | Workforce needed +35 %<br />+1/4 Quartz Sand<br/>+1/5 Iron<br />+1/6 Copper<br />+1/6 Zinc<br />+1/8 Gold Ore |
 | ![Shift Foreman](./data/graphics/icons/shift_foreman.png) | Shift Foreman | Rare | All riverslot buildings | Productivity +25 %<br />Workforce needed -10 %<br />Maintenance costs -10 % |
+| ![Madame Dorade, Fishing Enthusiast](./data/graphics/icons/madame_dorade_fishing_enthusiast.png) | Madame Dorade, Fishing Enthusiast | Epic | River Fishery<br />River Fishoil Factory<br />River Pearlfarm | +1/3 Fish<br />+1/3 Calamari<br />+1/3 Lobster |
 
 ## Screenshots (WIP)
 
 ![Gold Prospector](./screenshots/gold_prospector.png)
 ![Shift Foreman](./screenshots/shift_foreman.png)
+![Madame Dorade, Fishing Enthusiast](./screenshots/madame_dorade_fishing_enthusiast.png)

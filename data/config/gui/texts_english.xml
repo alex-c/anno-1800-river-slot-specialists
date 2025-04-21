@@ -23,5 +23,16 @@
     </Text>
     <!-- END SPECIALIST - Shift Foreman -->
 
+    <!-- START SPECIALIST - Madame Dorade, Fishing Enthusiast -->
+    <Text>
+      <GUID>2003000004</GUID>
+      <Text>Madame Dorade, Fishing Enthusiast</Text>
+    </Text>
+    <Text>
+      <GUID>2003000005</GUID>
+      <Text>While her husband is working as a bank teller, Madame Dorade spends her days outside by ther river, catching all manners of fish and crustaceans. She is considered an expert in the field and many a fisher envies her ability to come home with fresh lobster an day she wishes to.</Text>
+    </Text>
+    <!-- END SPECIALIST - Madame Dorade, Fishing Enthusiast -->
+
    </ModOp>
 </ModOps>
