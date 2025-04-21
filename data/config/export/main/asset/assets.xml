@@ -155,7 +155,7 @@
    </ModOp>
    <!-- END SPECIALIST - Shift Foreman -->
 
-    <ModOp Type="add" GUID="192973,192730,192735,192838,192907,192902" Path="/Values/RewardPool/ItemsPool">
+    <ModOp Type="add" GUID="192973,192730,192735,192838,192907,192902,193977,193974,193967" Path="/Values/RewardPool/ItemsPool">
         <Item>
             <ItemLink>2003000000</ItemLink>
         </Item>
