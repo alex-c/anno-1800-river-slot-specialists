@@ -101,10 +101,10 @@
          <Template>GuildhouseItem</Template>
          <Values>
             <Standard>
-                <GUID>2003000003</GUID>
+                <GUID>2003000002</GUID>
                 <Name>Shift Foreman</Name>
                 <IconFilename>data/graphics/icons/shift_foreman.png</IconFilename>
-                <InfoDescription>2003000004</InfoDescription>
+                <InfoDescription>2003000003</InfoDescription>
             </Standard>
             <Text>
                <LocaText>
@@ -160,7 +160,7 @@
             <ItemLink>2003000000</ItemLink>
         </Item>
         <Item>
-            <ItemLink>2003000003</ItemLink>
+            <ItemLink>2003000002</ItemLink>
         </Item>
     </ModOp>
 
@@ -169,7 +169,7 @@
             <Template>Trigger</Template>
             <Values>
                 <Standard>
-                    <GUID>2003000002</GUID>
+                    <GUID>2003000004</GUID>
                     <Name>Specialist Trigger</Name>
                 </Standard>
                 <Trigger>

@@ -14,11 +14,11 @@
 
     <!-- START SPECIALIST - Shift Foreman -->
     <Text>
-      <GUID>2003000003</GUID>
+      <GUID>2003000002</GUID>
       <Text>Shift Foreman</Text>
     </Text>
     <Text>
-      <GUID>2003000004</GUID>
+      <GUID>2003000003</GUID>
       <Text>Making sure nobody slacks off on shift.</Text>
     </Text>
     <!-- END SPECIALIST - Shift Foreman -->
