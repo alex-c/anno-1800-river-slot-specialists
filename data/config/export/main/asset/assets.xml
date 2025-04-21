@@ -126,7 +126,7 @@
             <ItemEffect>
                 <EffectTargets>
                     <Item>
-                        <GUID>1500301947</GUID>
+                        <GUID>1500301947</GUID> <!-- All riverslot buildings -->
                     </Item>
                 </EffectTargets>
             </ItemEffect>
@@ -155,16 +155,85 @@
    </ModOp>
    <!-- END SPECIALIST - Shift Foreman -->
    
-   <!-- START SPECIALIST - Madame Dorade, Fishing Enthusiast -->
+   <!-- START MACHINE - Motorized Millstone -->
    <ModOp GUID="112574" Type="addNextSibling">
       <Asset>
          <Template>GuildhouseItem</Template>
          <Values>
             <Standard>
                 <GUID>2003000004</GUID>
+                <Name>Motorized Millstone</Name>
+                <IconFilename>data/graphics/icons/motorized_millstone.png</IconFilename>
+                <InfoDescription>2003000005</InfoDescription>
+            </Standard>
+            <Text>
+               <LocaText>
+                  <English>
+                     <Text>Item Template</Text>
+                     <Status>Exported</Status>
+                     <ExportCount>1</ExportCount>
+                  </English>
+               </LocaText>
+            </Text>
+            <Item>
+               <MaxStackSize>1</MaxStackSize>
+               <Rarity>Rare</Rarity>
+               <ItemType>Specialist</ItemType>
+               <Allocation>GuildHouse</Allocation>
+               <TradePrice>76000</TradePrice>
+               <TradePriceOnlineCurrency>76000</TradePriceOnlineCurrency>
+            </Item>
+            <ItemEffect>
+                <EffectTargets>
+                    <Item>
+                        <GUID>1999003214</GUID> <!-- River Saw Mill NW -->
+                    </Item>
+                    <Item>
+                        <GUID>1999003210</GUID> <!-- River Saw Mill OW -->
+                    </Item>
+                </EffectTargets>
+            </ItemEffect>
+            <FactoryUpgrade>
+                <ProductivityUpgrade>
+                    <Value>50</Value>
+                    <Percental>1</Percental>
+                </ProductivityUpgrade>
+            </FactoryUpgrade>
+            <BuildingUpgrade>
+                <WorkforceAmountUpgrade>
+                    <Value>-50</Value>
+                    <Percental>1</Percental>
+                </WorkforceAmountUpgrade>
+                <MaintenanceUpgrade>
+                    <Value>+25</Value>
+                    <Percental>1</Percental>
+                </MaintenanceUpgrade>
+            </BuildingUpgrade>
+            <ExpeditionAttribute>
+                <BaseMorale>10</BaseMorale>
+                <ExpeditionAttributes>
+                    <Item>
+                        <Attribute>Crafting</Attribute>
+                        <Amount>25</Amount>
+                    </Item>
+                </ExpeditionAttributes>
+                <ItemDifficulties>Average</ItemDifficulties>
+            </ExpeditionAttribute>
+         </Values>
+      </Asset>
+   </ModOp>
+   <!-- END MACHINE - Motorized Millstone -->
+   
+   <!-- START SPECIALIST - Madame Dorade, Fishing Enthusiast -->
+   <ModOp GUID="112574" Type="addNextSibling">
+      <Asset>
+         <Template>GuildhouseItem</Template>
+         <Values>
+            <Standard>
+                <GUID>2003000006</GUID>
                 <Name>Madame Dorade, Fishing Enthusiast</Name>
                 <IconFilename>data/graphics/icons/madame_dorade_fishing_enthusiast.png</IconFilename>
-                <InfoDescription>2003000005</InfoDescription>
+                <InfoDescription>2003000007</InfoDescription>
             </Standard>
             <Text>
                <LocaText>
@@ -216,15 +285,25 @@
                 </AdditionalOutput>
             </FactoryUpgrade>
             <ExpeditionAttribute>
-                <BaseMorale>10</BaseMorale>
-                <ItemDifficulties>Average</ItemDifficulties>
+                <BaseMorale>30</BaseMorale>
+                <ExpeditionAttributes>
+                    <Item>
+                        <Attribute>PerkFemale</Attribute>
+                        <Amount>1</Amount>
+                    </Item>
+                    <Item>
+                        <Attribute>Hunting</Attribute>
+                        <Amount>25</Amount>
+                    </Item>
+                </ExpeditionAttributes>
+                <ItemDifficulties>Average;Hard</ItemDifficulties>
             </ExpeditionAttribute>
          </Values>
       </Asset>
    </ModOp>
    <!-- END SPECIALIST - Madame Dorade, Fishing Enthusiast -->
 
-    <!-- Item Pools  - Rare Items -->
+    <!-- Item Pools  - Rare Specialists -->
     <ModOp Type="add" GUID="192973,192730,192735,192838,192907,192902,193977,193974,193967" Path="/Values/RewardPool/ItemsPool">
         <Item>
             <ItemLink>2003000000</ItemLink>
@@ -234,10 +313,17 @@
         </Item>
     </ModOp>
 
-    <!-- Item Pools  - Epic Items -->
-    <ModOp Type="add" GUID="192974,192731,192736,192839,192908,192903,193083,193965" Path="/Values/RewardPool/ItemsPool">
+    <!-- Item Pools  - Rare Machines -->
+    <ModOp Type="add" GUID="192953,193027,192876,192884,192679,193940" Path="/Values/RewardPool/ItemsPool">
         <Item>
             <ItemLink>2003000004</ItemLink>
+        </Item>
+    </ModOp>
+
+    <!-- Item Pools  - Epic Specialists -->
+    <ModOp Type="add" GUID="192974,192731,192736,192839,192908,192903,193083,193965" Path="/Values/RewardPool/ItemsPool">
+        <Item>
+            <ItemLink>2003000006</ItemLink>
         </Item>
     </ModOp>
 
@@ -247,7 +333,7 @@
             <Template>Trigger</Template>
             <Values>
                 <Standard>
-                    <GUID>2003000006</GUID>
+                    <GUID>2003000008</GUID>
                     <Name>Specialist Trigger</Name>
                 </Standard>
                 <Trigger>
@@ -274,7 +360,7 @@
                                                 <Asset>2003000000</Asset> 
                                             </Item>
                                             <Item>
-                                                <Asset>2003000003</Asset> 
+                                                <Asset>2003000002</Asset> 
                                             </Item>
                                         </UnhideAssets>
                                         <UnlockAssets>
@@ -282,7 +368,7 @@
                                                 <Asset>2003000000</Asset> 
                                             </Item>
                                             <Item>
-                                                <Asset>2003000003</Asset> 
+                                                <Asset>2003000002</Asset> 
                                             </Item>
                                         </UnlockAssets>
                                     </ActionUnlockAsset>
@@ -302,7 +388,7 @@
             <Template>Trigger</Template>
             <Values>
                 <Standard>
-                    <GUID>2003000007</GUID>
+                    <GUID>2003000009</GUID>
                     <Name>Specialist Trigger</Name>
                 </Standard>
                 <Trigger>
@@ -314,6 +400,55 @@
                                 <PlayerCounter>PopulationByLevel</PlayerCounter>
                                 <Context>15000005</Context>
                                 <CounterAmount>500</CounterAmount>
+                            </ConditionPlayerCounter>
+                        </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                        <Item>
+                            <TriggerAction>
+                                <Template>ActionUnlockAsset</Template>
+                                <Values>
+                                    <Action />
+                                    <ActionUnlockAsset>
+                                        <UnhideAssets>
+                                            <Item>
+                                                <Asset>2003000006</Asset> 
+                                            </Item>
+                                        </UnhideAssets>
+                                        <UnlockAssets>
+                                            <Item>
+                                                <Asset>2003000006</Asset> 
+                                            </Item>
+                                        </UnlockAssets>
+                                    </ActionUnlockAsset>
+                                </Values>
+                            </TriggerAction>
+                        </Item>
+                    </TriggerActions>
+                </Trigger>
+                <TriggerSetup />
+            </Values>
+        </Asset>
+    </ModOp>
+
+    <!-- Trigger: 1 Artisan -->
+    <ModOp Type="addnextSibling" GUID="130248">
+        <Asset>
+            <Template>Trigger</Template>
+            <Values>
+                <Standard>
+                    <GUID>2003000010</GUID>
+                    <Name>Specialist Trigger</Name>
+                </Standard>
+                <Trigger>
+                    <TriggerCondition>
+                        <Template>ConditionPlayerCounter</Template>
+                        <Values>
+                            <Condition />
+                            <ConditionPlayerCounter>
+                                <PlayerCounter>PopulationByLevel</PlayerCounter>
+                                <Context>15000002</Context>
+                                <CounterAmount>1</CounterAmount>
                             </ConditionPlayerCounter>
                         </Values>
                     </TriggerCondition>
